@@ -15,8 +15,8 @@ This is a omprehensive Android mobile application developed using Java, Firebase
 
 > [!IMPORTANT]
 > ### Important Note:
-> The application requires a minimum SDK of 31 and a target SDK of 33.
-> Requires the YOUR_API_KEY in the file `AndroidManifest.xml`
+> The application requires a minimum SDK of 31 and a target SDK of 33.<br>
+> Requires the **YOUR_API_KEY** in the file `AndroidManifest.xml`.<br>
 > The `google-services` dependency must be installed for the application to function properly.
 
 ## Main Functionalities
