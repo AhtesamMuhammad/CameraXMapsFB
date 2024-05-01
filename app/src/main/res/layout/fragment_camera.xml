@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CameraFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/viewFinder"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.camera.view.PreviewView>
+
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_width="383dp"
+            android:layout_height="52dp"
+            android:background="@drawable/round_borders"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.97">
+
+            <ImageView
+                android:id="@+id/preview_gallery"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginVertical="10dp"
+                app:srcCompat="@drawable/galleria_vector" />
+
+            <ImageView
+                android:id="@+id/image_capture_button"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginVertical="10dp"
+                app:srcCompat="@drawable/camera_vector" />
+
+            <ImageView
+                android:id="@+id/video_capture_button"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginVertical="10dp"
+                app:srcCompat="@drawable/videocam_vector" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="676dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

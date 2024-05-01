@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authentificationFragment">
+
+    <fragment
+        android:id="@+id/CameraFragment"
+        android:name="com.ahtesam.cameraxmapsfb.CameraFragment"
+        android:label="@string/fragment_camera"
+        tools:layout="@layout/fragment_camera"/>
+    <fragment
+        android:id="@+id/authentificationFragment"
+        android:name="com.ahtesam.cameraxmapsfb.Authentification.AuthentificationFragment"
+        android:label="Authentification"
+        tools:layout="@layout/fragment_authentification" >
+        <action
+            android:id="@+id/action_authentificationFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.ahtesam.cameraxmapsfb.MenuFragment"
+        android:label="Menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_CameraFragment"
+            app:destination="@id/CameraFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_imageListFragment"
+            app:destination="@id/imageListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.ahtesam.cameraxmapsfb.LocationFragment"
+        android:label="Location"
+        tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/imageListFragment"
+        android:name="com.ahtesam.cameraxmapsfb.Gallery.GalleryFragment"
+        android:label="Gallery" />
+</navigation>
